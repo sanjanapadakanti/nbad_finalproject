@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import './App.css'
+import Menu from './Menu/Menu';
+import Home from './Home/Home';
 
+import Help from './Help/Help';
+import LoginPage from './LoginPage/LoginPage';
+import RegisterPage from './RegisterPage/RegisterPage';
+import AddBudget from './AddBudget/AddBudget';
+import RemoveBudget from './RemoveBudget/RemoveBudget';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Menu />
+      <div className="mainContainer">
+        <Routes>
+          <Route path="/Help" element={<Help />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/AddBudget" element={<AddBudget />} />
+          <Route path="/RemoveBudget" element={<RemoveBudget />} />
+          <Route path="/login" element={<LoginPage />} />
+        
+          <Route
+            path="/"
+            element={<Navigate to="/login" />} // Update this based on your authentication logic
+          />
+        </Routes>
+      </div>
+      
+    </Router>
   );
 }
 

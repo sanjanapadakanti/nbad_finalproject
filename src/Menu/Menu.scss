@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.menu {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu a:hover {
+  color: #ffcc00;
+}
+
+.menu .hello-message {
+  font-size: 18px;
+  color: #fff;
+}
