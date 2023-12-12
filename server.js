@@ -426,5 +426,10 @@ app.get("/user/validateToken", (req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log(`Server is running at http://155.138.195.180:${PORT}`);
+<<<<<<< HEAD
+  console.log(`Server is running at http://66.42.93.147:${PORT}`);
 });
+=======
+  console.log(`Server is running at http://localhost:${PORT}`);
+});
+>>>>>>> 68defbedf2184e92458d11d2a947d727a1df4479

@@ -26,7 +26,7 @@ function AddBudget({ updateHomeData }) {
 
   const fetchAllCategories = async () => {
     try {
-      const response = await axios.get('http://155.138.195.180:4000/api/categories');
+      const response = await axios.get('http://66.42.93.147:4000/api/categories');
       setAllCategories(response.data);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -53,7 +53,7 @@ function AddBudget({ updateHomeData }) {
     };
 
     try {
-      const response = await axios.post('http://155.138.195.180:4000/api/AddBudget', budgetData);
+      const response = await axios.post('http://66.42.93.147:4000/api/AddBudget', budgetData);
       console.log(response.data);
 
       if (typeof updateHomeData === 'function') {

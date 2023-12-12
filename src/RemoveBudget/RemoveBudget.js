@@ -21,7 +21,7 @@ function RemoveBudget({ updateHomeData }) {
   const fetchDelocatedCategories = (year, month) => {
     const userId = localStorage.getItem('userId');
     axios
-      .get(`http://155.138.195.180:4000/api/get-budgets/${year}/${month}/${userId}`)
+      .get(`http://66.42.93.147:4000/api/get-budgets/${year}/${month}/${userId}`)
       .then((response) => {
         const uniqueCategories = [...new Set(response.data.map(item => item.category))];
         setAllocatedCategories(uniqueCategories);
@@ -34,7 +34,7 @@ function RemoveBudget({ updateHomeData }) {
 
   const fetchAllCategories = async () => {
     try {
-      const response = await axios.get('http://155.138.195.180:4000/api/categories');
+      const response = await axios.get('http://66.42.93.147:4000/api/categories');
       const categories = response.data.map((category) => category.category);
       setAllocatedCategories(categories);
     } catch (error) {
@@ -54,7 +54,7 @@ function RemoveBudget({ updateHomeData }) {
     };
 
     try {
-      const response = await axios.post('http://155.138.195.180:4000/api/deallocation-budget', deallocateData);
+      const response = await axios.post('http://66.42.93.147:4000/api/deallocation-budget', deallocateData);
       console.log(response.data);
 
       if (typeof updateHomeData === 'function') {
