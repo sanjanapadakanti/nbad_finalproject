@@ -25,7 +25,7 @@ The Personal Budget App is a web application that helps users manage their month
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/personal-budget-app.git
+    git clone https://github.com/sanjanapadakanti/personal-budget-app.git
     cd personal-budget-app
     ```
 
@@ -44,7 +44,8 @@ The Personal Budget App is a web application that helps users manage their month
     npm start
     ```
 
-5. Access the app in your browser at `http://localhost:3000`.
+5. Access the app in your browser at `http://l144.202.18.160:3000`.
+   
 
 ## Database Setup
 
