@@ -10,7 +10,7 @@ const app = express();
 
 
 
-const PORT = process.env.PORT || 4000; 
+const PORT = 4000; 
 const compression = require('compression'); 
 
 const dotenv = require('dotenv'); 
@@ -348,9 +348,6 @@ app.post('/api/deallocation-budget', (req, res) => {
 });
 
 
-
-
-
 // Add a new endpoint to get data for the line graph with a range of years
 
 app.get('/api/get-line-graph-data-range/:category/:startYear/:startMonth/:endYear/:endMonth/:userId', (req, res) => {
@@ -429,5 +426,5 @@ app.get("/user/validateToken", (req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
+  console.log(`Server is running at http://155.138.195.180:${PORT}`);
 });

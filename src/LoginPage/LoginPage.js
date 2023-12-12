@@ -12,7 +12,7 @@ const LoginPage = () => {
     let decodedToken;
 
     try {
-      response = await fetch("http://localhost:4000/api/login", {
+      response = await fetch("http://155.138.195.180:4000/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
