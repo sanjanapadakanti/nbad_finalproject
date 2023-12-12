@@ -10,7 +10,7 @@ const app = express();
 
 
 
-const PORT = 4000; 
+const PORT = 3002; 
 const compression = require('compression'); 
 
 const dotenv = require('dotenv'); 
@@ -425,11 +425,8 @@ app.get("/user/validateToken", (req, res) => {
 
 
 
-app.listen(PORT, () => {
-<<<<<<< HEAD
-  console.log(`Server is running at http://66.42.93.147:${PORT}`);
+app.listen(PORT,() => {
+
+  console.log(`Server is running at http://144.202.18.160:${PORT}`);
 });
-=======
-  console.log(`Server is running at http://localhost:${PORT}`);
-});
->>>>>>> 68defbedf2184e92458d11d2a947d727a1df4479
+

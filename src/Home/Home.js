@@ -62,7 +62,7 @@ function HomePage() {
 
   const fetchData = (year, month, userId) => {
     axios
-      .get(`http://66.42.93.147:4000/api/get-budgets/${year}/${month}/${userId}`)
+      .get(`http://144.202.18.160:3002/api/get-budgets/${year}/${month}/${userId}`)
       .then((response) => {
         setBudgets(response.data);
       })
@@ -75,7 +75,7 @@ function HomePage() {
     const storedUserId = localStorage.getItem("userId");
     axios
       .get(
-        `http://66.42.93.147:4000/api/get-table-data/${selectedYearTable}/${storedUserId}`
+        `http://144.202.18.160:3002/api/get-table-data/${selectedYearTable}/${storedUserId}`
       )
       .then((response) => {
         setTableData(response.data);
@@ -87,7 +87,7 @@ function HomePage() {
 
   const fetchUsedCategories = () => {
     axios
-      .get("http://66.42.93.147:4000/api/categories")
+      .get("http://144.202.18.160:3002/api/categories")
       .then((response) => {
         setUsedCategories(response.data);
         // Assuming you want to select the first category by default

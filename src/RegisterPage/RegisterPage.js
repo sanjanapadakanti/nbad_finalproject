@@ -11,7 +11,7 @@ const RegisterPage = () => {
 
   const handleRegister = async () => {
     try {
-      const response = await fetch('http://66.42.93.147:4000/api/register', {
+      const response = await fetch('http://144.202.18.160:3002/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
