@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Personal Budget App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The Personal Budget App is a web application that helps users manage their monthly expenditures. It integrates a user-friendly UI with a MySQL database to store budget data. Users can add and delete various budget categories such as food, home rent, gas, electricity, and WiFi bills. The app provides insightful visualizations, including pie charts, bar charts, and tables, to give users a clear overview of their monthly expenses.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User Authentication**: Secure user authentication for login and logout functionality.
+- **Budget Management**: Add, delete, and update budget entries for different categories.
+- **Visualization**: Monthly expenditure visualized through pie charts, bar charts, and tables.
+- **Help Pages**: Detailed help pages to guide users through the application.
 
-Runs the app in the development mode.\
-Open [http://144.202.18.160:3000](http://144.202.18.160:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**:
+  - HTML, CSS, JavaScript
 
-### `npm test`
+- **Backend**:
+  - Node.js with Express for server-side logic
+  - MySQL for database management
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    git clone https://github.com/your-username/personal-budget-app.git
+    cd personal-budget-app
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+3. Configure the MySQL database:
+    - Create a MySQL database and update the connection details in `config/database.js`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Run the application:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    npm start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Access the app in your browser at `http://localhost:3000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Database Setup
 
-## Learn More
+- Create a MySQL database with the following schema:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```sql
+    CREATE TABLE budgets (
+      id INT PRIMARY KEY AUTO_INCREMENT,
+      category VARCHAR(255) NOT NULL,
+      amount DECIMAL(10,2) NOT NULL,
+      date DATE NOT NULL
+    );
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
+1. **Login**: Use your credentials to log in.
+2. **Add Budgets**: Navigate to the "Add Budget" section to add your monthly expenditures.
+3. **Visualize Data**: Check the "Visualize Data" section for pie charts, bar charts, and tables.
+4. **Delete Budgets**: Go to the "Manage Budgets" section to delete entries.
+5. **Logout**: Click on the "Logout" button when you are done.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to contribute by opening issues or creating pull requests. Follow the [contributing guidelines](CONTRIBUTING.md) for more details.
